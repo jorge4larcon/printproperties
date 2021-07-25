@@ -4,12 +4,16 @@
 """
 
 import argparse
+import os
 import sys
 
 from dotenv import dotenv_values
 
 
 def run(args):
+    if not os.path.isfile(args.properties_file):
+        sys.exit(f'The file "{args.properties_file}" does not exist')
+
     properties = dotenv_values(args.properties_file)
     try:
         print(properties[args.property])
