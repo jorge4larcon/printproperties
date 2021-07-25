@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""printproperties: A CLI to retrieve properties from gradle.properties files
+"""printproperties: A CLI to print properties from gradle.properties files
 """
 
 import argparse
@@ -28,11 +28,11 @@ def parse_args():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument(
-        "-g", "--gradle-properties",
-        metavar="GRADLE_PROPERTIES",
+        "-f", "--file",
+        metavar="FILE",
         type=str,
         default="gradle.properties",
-        help="this is the path to the gradle.properties file",
+        help="the path of the gradle.properties file",
         dest="properties_file"
     )
     parser.add_argument(
@@ -47,7 +47,7 @@ def parse_args():
     parser.add_argument(
         "--version",
         action="version",
-        version="%(prog)s 1.0"
+        version="%(prog)s 0.0.1"
     )
     return parser.parse_args()
 
