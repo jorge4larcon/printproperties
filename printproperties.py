@@ -16,7 +16,7 @@ def run(args):
 
     properties = dotenv_values(args.properties_file)
     try:
-        print(properties[args.property])
+        print(properties[args.property], end="")
     except KeyError:
         sys.exit(
             f'The property "{args.property}" doesn not exist in '
