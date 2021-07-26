@@ -51,7 +51,7 @@ def parse_args():
     parser.add_argument(
         "--version",
         action="version",
-        version="%(prog)s 0.0.1"
+        version="%(prog)s 0.0.2"
     )
     return parser.parse_args()
 
